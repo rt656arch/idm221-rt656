@@ -132,11 +132,11 @@ nav {
     height: 100vh;
     margin-block-start: var(--nav-height);
     width: 300px;
+
     position: fixed;
     right: -300px;
     top: 0;
     z-index: 1000;
-    transition: right 0.3s ease;
 }
 
 nav ul {

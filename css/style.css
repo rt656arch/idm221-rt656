@@ -13,22 +13,16 @@
 }
 
 :root {
-    --color-overflow: #010101;
-    --color-base: #FFD1DC;
-    --color-surface: black;
-    --color-light: #f4f4f4;
-    --primary: #D6D1FF;
+    --color-overflow: black;
+    --color-base: #FFD1DC; /*background color*/
+    --color-surface: black; /*color for buttons / padding*/
+    --primary: #D6D1FF; /*button text color*/
   
     --background-color: var(--color-surface);
-    --foreground-color: var(--color-light);
   
-    --font-serif: 'Roboto Slab', Cambria, Cochin, Georgia, Times,
-      'Times New Roman', serif;
-    --font-bold: 'Six Caps', var(--font-serif);
-  
-    --nav-background-color:#FFDED1; 
-    --nav-height: 48px;
-    --rhythm: 1.5rem;
+    --nav-background-color:#FFDED1; /*background color of nav when it's toggled*/
+    --nav-height: 48px; 
+    --rhythm: 1.5rem; /*sets consistent vertical spacing*/
 }
 * {
     box-sizing: border-box;
@@ -36,7 +30,7 @@
 
 body {
     background-color: var(--color-base);
-    margin: 1.5rem;
+    margin: var(--rhythm);
     font-family: 'TheGirlNextDoor-Regular', sans-serif;
     line-height: var(--rhythm);
 }
@@ -56,26 +50,27 @@ header h1 {
 }
 
 header p,h3 {
-    padding: 0 1.5rem;
+    padding: 0 var(--rhythm);
 }
 
 body h1 {
-    padding: 1.5rem;
+    padding: var(--rhythm);
 }
 body h2 {
     margin:0;
-    padding: 1.5rem 0;
+    padding: var(--rhythm) 0;
 }
 body h3 {
-    padding: 0 0 1.5rem 0;
+    padding: 0 0 var(--rhythm) 0;
 }
 
 a {
-    color: var(--primary)
+    color: var(--primary);
+    font-size: 30px;
 }
 
 footer, .nav {
-    margin: 1.5rem;
+    margin: var(--rhythm);
     text-align: center;
     background-color: var(--color-surface);
     padding: 20px;
@@ -88,12 +83,15 @@ ul {
     padding: 0;
 }
 
+.nav li, footer li {
+    margin-bottom: 1rem;
+}
 .layout {
     margin: 0 10px;
 }
 
 .aboutme {
-    padding: 1.5rem;
+    padding: var(--rhythm);
 }
 
 .abtmeimages {
@@ -105,6 +103,8 @@ ul {
 .nextto {
     text-align: center;
 }
+
+/*puts images next to each other while keeping them centered */
 .nextto img {
     display: inline-block;
     margin: 0;
@@ -113,26 +113,29 @@ ul {
     border-radius: 10px;
 }
 
+/*font for resume*/
 .resume {
     font-family: 'Times New Roman', Times, serif;
 }
+
 .resume h2,h3,p {
     padding: 0;
     margin: 0;
 }
 
+/*hamburger navigation*/
 .hamburger {
-    cursor: pointer;
-    height: 20px;
-    position: absolute;
-    right: 1rem;
+    cursor: pointer; /*changes the cursor when hovering over the hamburger to indicate that it is clickable*/
+    height: 20px; 
+    position: absolute; /*allows the position of the hamburger to be 1rem from the top right*/
+    right: 1rem; 
     top: 1rem;
-    width: 26px;
-    z-index: 1001;
+    width: 26px; /*sets the width of the hamburger*/
+    z-index: 1001; /*positions the container of the hamburger to be higher than other elements*/
 }
 
 .hamburger svg {
-    fill: var(--color-surface);
+    fill: var(--color-surface); /*fills the color of the hamburger svg with black*/
     display: block;
     width: 100%;
     height: 100%;
@@ -174,12 +177,12 @@ nav a:hover {
     color: black;
 }
 
-/* Toggle nav visibility when checkbox is checked */
+/*toggle nav visibility when checkbox is checked*/
 .nav-toggle:checked ~ nav {
-    right: 0; /* Show the navigation when checked */
+    right: 0; /*show the navigation when checked*/
 }
 
-/* Hamburger to 'X' transition */
+/*hamburger to 'X' transition*/
 .nav-toggle:checked ~ .hamburger svg rect:nth-child(1) {
     transform: rotate(45deg);
     top: -2px;
@@ -194,7 +197,7 @@ nav a:hover {
 }
 
 .nav-toggle {
-    display: none; /* Hide the checkbox */
+    display: none; /*hide the checkbox*/
 }
 
 

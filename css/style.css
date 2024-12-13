@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'TheGirlNextDoor-Regular';
+    src: url('./TheGirlNextDoor-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('EBGaramond-Regular.woff2') format('woff2'),
+        url('EBGaramond-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
+    background-color: black;
+    margin: 0;
+    font-family: 'TheGirlNextDoor-Regular', sans-serif;
+}
+header {
+   background-color: #FFD1DC;
+   color: black;
+   margin: 0;
+   width: 100%;
+   position: relative;
+   text-align: center;
+}
+header h1 {
+    margin: 0;
+    padding: 10px;
+    font-family: 'EBGaramond-Regular.woff2', sans-serif;
+}
+
+header p {
+    padding: 10px;
+}
+.layout {
+    margin: 0 10px;
+}

@@ -12,19 +12,42 @@
     font-display: swap;
 }
 
+:root {
+    --color-overflow: #010101;
+    --color-base: #FFD1DC;
+    --color-surface: black;
+    --color-light: #f4f4f4;
+    --primary: #D6D1FF;
+  
+    --background-color: var(--color-surface);
+    --foreground-color: var(--color-light);
+  
+    --font-serif: 'Roboto Slab', Cambria, Cochin, Georgia, Times,
+      'Times New Roman', serif;
+    --font-bold: 'Six Caps', var(--font-serif);
+  
+    --nav-background-color:#FFDED1; 
+    --nav-height: 48px;
+    --rhythm: 1.5rem;
+}
+* {
+    box-sizing: border-box;
+}
 
 body {
-    background-color: black;
-    margin: 0;
+    background-color: var(--color-base);
+    margin: 1.5rem;
     font-family: 'TheGirlNextDoor-Regular', sans-serif;
+    line-height: var(--rhythm);
 }
 header {
-   background-color: #FFD1DC;
+   background-color: var(--color-base);
    color: black;
    margin: 0;
    width: 100%;
    position: relative;
    text-align: center;
+   line-height: var(--rhythm);
 }
 header h1 {
     margin: 0;
@@ -32,9 +55,140 @@ header h1 {
     font-family: 'EBGaramond-Regular.woff2', sans-serif;
 }
 
-header p {
+header p,h3 {
+    padding: 0 1.5rem;
+}
+
+body h1 {
+    padding: 1.5rem;
+}
+body h2 {
+    margin:0;
     padding: 10px;
 }
+
+a {
+    color: var(--primary)
+}
+
+footer, .nav {
+    margin: 1.5rem;
+    text-align: center;
+    background-color: var(--color-surface);
+    padding: 20px;
+    border-radius: 15px;
+    bottom: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
 .layout {
     margin: 0 10px;
 }
+
+.aboutme {
+    padding: 1.5rem;
+}
+
+.abtmeimages {
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+}
+
+.nextto {
+    text-align: center;
+}
+.nextto img {
+    display: inline-block;
+    margin: 0;
+    width: 150px;
+    height: 110px;
+    border-radius: 10px;
+}
+
+.hamburger {
+    cursor: pointer;
+    height: 20px;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 26px;
+    z-index: 1001;
+}
+
+.hamburger svg {
+    fill: var(--color-surface);
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    background: var(--nav-background-color);
+    height: 100vh;
+    margin-block-start: var(--nav-height);
+    width: 300px;
+    position: fixed;
+    right: -300px;
+    top: 0;
+    z-index: 1000;
+    transition: right 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    padding: 0;
+}
+
+nav a {
+    color: black;
+    display: block;
+    font-size: 1.25rem;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: var(--nav-background-color);
+    color: black;
+}
+
+/* Toggle nav visibility when checkbox is checked */
+.nav-toggle:checked ~ nav {
+    right: 0; /* Show the navigation when checked */
+}
+
+/* Hamburger to 'X' transition */
+.nav-toggle:checked ~ .hamburger svg rect:nth-child(1) {
+    transform: rotate(45deg);
+    top: -2px;
+}
+
+.nav-toggle:checked ~ .hamburger svg rect:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle:checked ~ .hamburger svg rect:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.nav-toggle {
+    display: none; /* Hide the checkbox */
+}
+
+
+
+
+
+
+

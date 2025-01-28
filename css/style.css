@@ -184,7 +184,7 @@ nav a:hover {
 
 /*hamburger to 'X' transition*/
 .nav-toggle:checked ~ .hamburger svg rect:nth-child(1) {
-    transform: rotate(45deg);
+    transform: translate(13px, 0px) rotate(45deg);
     top: -2px;
 }
 
@@ -193,7 +193,7 @@ nav a:hover {
 }
 
 .nav-toggle:checked ~ .hamburger svg rect:nth-child(3) {
-    transform: rotate(-45deg);
+    transform: translate(-4px, 7px) rotate(-45deg);
 }
 
 .nav-toggle {

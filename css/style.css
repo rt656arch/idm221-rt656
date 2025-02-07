@@ -31,7 +31,7 @@
 body {
     background-color: var(--color-base);
     margin: var(--rhythm);
-    font-family: 'TheGirlNextDoor-Regular', sans-serif;
+    font-family: 'EB Garamond', sans-serif;
     line-height: var(--rhythm);
 }
 header {
